@@ -12,11 +12,13 @@
         --color-text-neutral: #718096;
         --color-text-danger: #e53e3e;
         --color-text-success: #38a169;
+
         --color-background: #f7fafc;
         --color-secondary-background: #edf2f7;
         --color-accent-background: #f6e05e;
         --color-danger-background: #feb2b2;
         --color-success-background: #c6f6d5;
+
         --color-border: #e2e8f0;
         --color-accent-border: #805ad5;
         --color-danger-border: #e53e3e;
@@ -30,11 +32,13 @@
         --color-text-neutral: #cbd5e0;
         --color-text-danger: #fc8181;
         --color-text-success: #68d391;
+
         --color-background: #1a202c;
         --color-secondary-background: #2d3748;
         --color-accent-background: #4a5568;
         --color-danger-background: #4a5568;
         --color-success-background: #2d3748;
+
         --color-border: #2d3748;
         --color-accent-border: #4299e1;
         --color-danger-border: #fc8181;
@@ -57,8 +61,8 @@
         @apply flex justify-center items-center
     }
 
-    .flexSpCWf {
-        @apply flex justify-between items-center w-full
+    .flexSbIc {
+        @apply flex justify-between items-center
     }
 
     .flexC {

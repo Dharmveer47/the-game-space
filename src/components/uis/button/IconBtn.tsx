@@ -11,7 +11,7 @@ export const IconBtn = ({ className, children = '', label, ...props }: Props) =>
       className={`${className} cursor-pointer p-1 px-2  rounded-full 
       hover:bg-gray-100 
       hover:text-black 
-      active:bg-gray-400 select-none hover:scale-110 transition-all`}
+      active:bg-gray-400 select-none hover:scale-110 transition-all border-skin-primary`}
       aria-label={label}
     >
       {children}

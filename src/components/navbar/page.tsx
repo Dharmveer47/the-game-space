@@ -6,45 +6,40 @@ const orbitron = Orbitron({ subsets: ['latin'] });
 import { IoMenu, IoSearch } from 'react-icons/io5';
 import { H5, H6 } from '../uis';
 import { IconBtn } from '../uis/button/IconBtn';
+import { Input } from '../uis/input/input';
+import { NavLinks } from './navLinks';
 export const Navbar = () => {
   return (
-    <nav className={`${orbitron.className} flexSpCWf  h-min `}>
+    <nav
+      className={`${orbitron.className} flexSbIc 
+      h-min space-x-3  mx-2 mt-1
+      text-skin-primary  
+     
+      `}
+    >
       <div className='flexIc'>
-        <IconBtn className='hover:scale-100' label='Menu'>
-          <IoMenu className='w-5 sm:w-auto h-auto' />
+        <IconBtn className='hover:scale-100 mr-3  lg:hidden' label='Menu'>
+          <IoMenu className='w-6  h-auto' />
         </IconBtn>
-        <H6 className='whitespace-nowrap text-skin-base'>The Game Space</H6>
+        <H6 className='whitespace-nowrap text-skin-primary'>The Game Space</H6>
       </div>
 
-      <span className={`flexIc border rounded-full h-full transition-all`}>
-        <input
-          name='search'
+      <NavLinks className='hidden lg:flexCC space-x-4' />
+
+      <span className={`flexIc relative`}>
+        <Input
           type='text'
           placeholder='Search_'
-          className='bg-transparent outline-none p-1 px-3 text-sm w-20 sm:w-auto animate-pulse focus:animate-none'
+          name='search'
+          className='w-36 border rounded-full border-skin-primary'
         />
-        <IconBtn className='border  w-7 h-full flexCC p-0 px-0' label='Search'>
+        <IconBtn
+          className='border  w-7 h-full flexCC p-0 px-0 absolute right-0 hover:scale-150'
+          label='Search'
+        >
           <IoSearch />
         </IconBtn>
       </span>
     </nav>
   );
 };
-
-/* GAME-SPACE */
-
-// position: absolute;
-// width: 267px;
-// height: 37px;
-// left: 80px;
-// top: 18px;
-
-// font-family: 'Orbitron';
-// font-style: normal;
-// font-weight: 400;
-// font-size: 30px;
-// line-height: 38px;
-
-// color: #FFFFFF;
-
-// text-shadow: 1px -1px 9px #FFFFFF;

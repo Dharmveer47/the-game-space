@@ -6,7 +6,7 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <div className='flex justify-between m-2'>
+    <div className=''>
       <Navbar />
     </div>
   );
