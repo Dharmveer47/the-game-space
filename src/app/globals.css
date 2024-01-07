@@ -2,26 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+@layer base {
+
+    :root {
+        --color-text-primary: #2d3748;
+        --color-text-secondary: #4a5568;
+        --color-text-accent: #805ad5;
+        --color-text-neutral: #718096;
+        --color-text-danger: #e53e3e;
+        --color-text-success: #38a169;
+        --color-background: #f7fafc;
+        --color-secondary-background: #edf2f7;
+        --color-accent-background: #f6e05e;
+        --color-danger-background: #feb2b2;
+        --color-success-background: #c6f6d5;
+        --color-border: #e2e8f0;
+        --color-accent-border: #805ad5;
+        --color-danger-border: #e53e3e;
+        --color-success-border: #38a169;
+    }
+
+    .theme-dark {
+        --color-text-primary: #f7fafc;
+        --color-text-secondary: #edf2f7;
+        --color-text-accent: #4299e1;
+        --color-text-neutral: #cbd5e0;
+        --color-text-danger: #fc8181;
+        --color-text-success: #68d391;
+        --color-background: #1a202c;
+        --color-secondary-background: #2d3748;
+        --color-accent-background: #4a5568;
+        --color-danger-background: #4a5568;
+        --color-success-background: #2d3748;
+        --color-border: #2d3748;
+        --color-accent-border: #4299e1;
+        --color-danger-border: #fc8181;
+        --color-success-border: #68d391;
+    }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+@layer utilities {
+    .flexIc {
+        @apply flex items-center
+    }
+
+    .flexCCWf {
+        @apply flex justify-center items-center w-full
+    }
+
+    .flexCC {
+        @apply flex justify-center items-center
+    }
+
+    .flexSpCWf {
+        @apply flex justify-between items-center w-full
+    }
+
+    .flexC {
+        @apply flex justify-center
+    }
+
+    .searchBorder {
+        clip-path: polygon(49% 50%, 0 0, 100% 0);
+    }
+
+
+
 }
