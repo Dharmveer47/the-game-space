@@ -4,17 +4,15 @@ import { Orbitron } from 'next/font/google';
 
 const orbitron = Orbitron({ subsets: ['latin'] });
 import { IoMenu, IoSearch } from 'react-icons/io5';
-import { H5, H6 } from '../uis';
-import { IconBtn } from '../uis/button/IconBtn';
-import { Input } from '../uis/input/input';
+import { H6, IconBtn, Input } from '../uis';
 import { NavLinks } from './navLinks';
+
 export const Navbar = () => {
   return (
     <nav
       className={`${orbitron.className} flexSbIc 
       h-min space-x-3  mx-2 mt-1
       text-skin-primary  
-     
       `}
     >
       <div className='flexIc'>
@@ -24,7 +22,7 @@ export const Navbar = () => {
         <H6 className='whitespace-nowrap text-skin-primary'>The Game Space</H6>
       </div>
 
-      <NavLinks className='hidden lg:flexCC space-x-4' />
+      <NavLinks className='hidden lg:flexCC space-x-5' />
 
       <span className={`flexIc relative`}>
         <Input
@@ -43,3 +41,5 @@ export const Navbar = () => {
     </nav>
   );
 };
+
+// https://codepen.io/gayane-gasparyan/pen/wvxewXO
