@@ -33,7 +33,7 @@ export const Navbar = () => {
         
         lg:flexCC lg:relative lg:space-x-5 lg:space-y-0 lg:p-0 lg:top-0 lg:shadow-none lg:bg-transparent lg:border-none 
         lg:opacity-100 lg:scale-100
-        ${open ? 'w-0 opacity-0 scale-0' : 'border w-3/4 opacity-100'}
+        ${!open ? 'w-0 opacity-0 scale-0' : 'border w-3/4 opacity-100'}
         `}
       />
 
