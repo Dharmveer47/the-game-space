@@ -15,9 +15,9 @@ export const NavLinks = ({ className }: Props) => {
         <li
           key={link.linkName}
           className='text-skin-primary text-sm  
-        border-skin-primary group'
+        border-skin-primary group p-0 m-0'
         >
-          <Link key={link.linkName} href={link.path} className=''>
+          <Link key={link.linkName} href={link.path} className='whitespace-nowrap'>
             {link.name}
           </Link>
           <div

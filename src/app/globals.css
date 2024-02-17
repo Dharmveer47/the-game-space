@@ -23,6 +23,13 @@
         --color-accent-border: #805ad5;
         --color-danger-border: #e53e3e;
         --color-success-border: #38a169;
+
+        --shadow-primary: #0000001a;
+        --shadow-secondary: #0000000d;
+        --shadow-accent: #805ad533;
+        --shadow-neutral: #71809633;
+        --shadow-danger: #e53e3e4d;
+        --shadow-success: #38a1694d;
     }
 
     .theme-dark {
@@ -43,6 +50,13 @@
         --color-accent-border: #4299e1;
         --color-danger-border: #fc8181;
         --color-success-border: #68d391;
+
+        --shadow-primary: #00000033;
+        --shadow-secondary: #0000001a;
+        --shadow-accent: #4299e133;
+        --shadow-neutral: #cbd5e033;
+        --shadow-danger: #fc818133;
+        --shadow-success: #68d39133;
     }
 }
 
