@@ -29,10 +29,10 @@ export const Background = ({ className, imgScr, alt, ...props }: Props) => {
       sizes='100vw'
       quality={100}
       fill
-      style={{
-        filter: `hue-rotate(${hue}deg)`,
-      }}
-      className={`object-cover -z-10 contrast-200 lg:contrast-100  ${className}`}
+      //  style={{
+      //    filter: `hue-rotate(${hue}deg)`,
+      //  }}
+      className={`object-cover -z-10  ${className}`}
       {...props}
     />
   );
