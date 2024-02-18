@@ -1,5 +1,6 @@
+'use client';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import React from 'react';
 
 type Props = {
   className?: string;
@@ -9,6 +10,18 @@ type Props = {
 };
 
 export const Background = ({ className, imgScr, alt, ...props }: Props) => {
+  const [hue, setHue] = useState(0);
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setHue((pre) => {
+        return pre > 360 ? 0 : pre + 1;
+      });
+    }, 400);
+    return () => {
+      // Clear the interval when the component unmounts
+      clearInterval(intervalId);
+    };
+  }, []);
   return (
     <Image
       alt={alt}
@@ -16,6 +29,9 @@ export const Background = ({ className, imgScr, alt, ...props }: Props) => {
       sizes='100vw'
       quality={100}
       fill
+      style={{
+        filter: `hue-rotate(${hue}deg)`,
+      }}
       className={`object-cover -z-10 contrast-200 lg:contrast-100  ${className}`}
       {...props}
     />
