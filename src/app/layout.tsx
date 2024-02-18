@@ -9,11 +9,14 @@ export const metadata: Metadata = {
   title: 'THE-GAME-SPACE',
   description: '',
 };
+type Props = {
+  children?: React.ReactNode;
+};
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: Readonly<Props>) {
   return (
-    <html lang='en' className='theme-dark m-2'>
-      <body className={`${inter.className} bg-skin-primary `}>
+    <html lang='en' className=''>
+      <body className={`${inter.className} bg-skin-primary`}>
         <Navbar />
         {children}
       </body>

@@ -13,9 +13,10 @@ export const Input = ({ name, type, placeholder, className, ...props }: Props) =
       type={type}
       placeholder={placeholder}
       className={`${className} bg-transparent outline-none 
-        p-1 px-3 text-sm 
+        p-1 px-3 pr-7 text-sm 
         sm:w-auto animate-pulse focus:animate-none
         focus:outline-none focus:shadow-md focus:drop-shadow-md focus:rounded-full
+        focus:border-skin-primary focus:transition-all duration-1000   focus-within:w-full 
         `}
       {...props}
     />
