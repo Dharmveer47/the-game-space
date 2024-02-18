@@ -16,7 +16,7 @@ export const Background = ({ className, imgScr, alt, ...props }: Props) => {
       sizes='100vw'
       quality={100}
       fill
-      className={`object-cover -z-10 ${className}`}
+      className={`object-cover -z-10 contrast-200 lg:contrast-100  ${className}`}
       {...props}
     />
   );

@@ -34,7 +34,7 @@ export const Navbar = () => {
       <main className='flexSbIc text-skin-primary m-1 lg:m-2 '>
         <div className='flexIc'>
           <IconBtn className=' mr-3  lg:hidden' label='Menu' onClick={handleOpen}>
-            <Icon className='w-6  h-auto' />
+            <Icon className='w-6  h-auto animate-scale ' />
           </IconBtn>
           <H6 className='whitespace-nowrap text-skin-primary'>The Game Space</H6>
         </div>
