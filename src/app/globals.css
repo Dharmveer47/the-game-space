@@ -3,6 +3,27 @@
 @tailwind utilities;
 
 
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-text-secondary) var(--color-background);
+    border-radius: 10px;
+}
+
+*::-webkit-scrollbar {
+    width: 6px;
+
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--color-background);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--color-background);
+    border-radius: 10px;
+    border: 2px solid var(--color-border);
+}
+
 @layer base {
 
     :root {

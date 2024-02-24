@@ -12,7 +12,9 @@ export const H1 = ({ children, className, ...props }: Props) => {
 
 export const H2 = ({ children, className, ...props }: Props) => {
   return (
-    <h2 className={` text-3xl md:text-4xl lg:text-5xl xl:text-6xl ${className}`}>{children}</h2>
+    <h2 className={`shadow-md text-3xl md:text-4xl lg:text-5xl xl:text-6xl ${className}`}>
+      {children}
+    </h2>
   );
 };
 
@@ -40,7 +42,7 @@ export const H6 = ({ children, className, ...props }: Props) => {
 
 export const P = ({ children, className, ...props }: Props) => {
   return (
-    <p className={` text-sm  ${className}`} {...props}>
+    <p className={` text-sm shadow-inner  ${className}`} {...props}>
       {children}
     </p>
   );

@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+const plugin = require('tailwindcss/plugin');
 /** @type {import('tailwindcss').Config} */
 const config: Config = {
   content: [
@@ -44,8 +45,24 @@ const config: Config = {
         danger: '1px 1px 3px var(--shadow-danger)',
         success: '1px 1px 3px var(--shadow-success)',
       },
+      textShadow: {
+        sm: '0 1px 2px var(--shadow-primary)',
+        DEFAULT: '0 2px 4px var(--shadow-primary)',
+        lg: '0 8px 16px var(--shadow-primary)',
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ matchUtilities, theme }: any) {
+      matchUtilities(
+        {
+          'text-shadow': (value: any) => ({
+            textShadow: value,
+          }),
+        },
+        { values: theme('textShadow') },
+      );
+    }),
+  ],
 };
 export default config;
