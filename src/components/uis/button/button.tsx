@@ -38,6 +38,7 @@ function Button({ className, children, variant, onClick, icon, ...props }: Reado
         active:bg-skin-neutral
         hover:tracking-wider
         cursor-pointer p-1    
+        
      select-none hover:scale-110 transition-all 
         ${variantStyles}
         ${className}`}

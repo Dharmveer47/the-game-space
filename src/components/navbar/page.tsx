@@ -20,7 +20,7 @@ export const Navbar = () => {
   return (
     <nav
       className={`${orbitron.className} 
-      fixed w-full top-0 backdrop-blur-md 
+      fixed w-full top-0 backdrop-blur-md  z-50
       `}
     >
       <main className='flexSbIc text-skin-primary m-1 lg:m-2 '>
