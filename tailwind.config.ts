@@ -9,6 +9,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        skin: {
+          primary: 'var(--shadow-primary)',
+          secondary: 'var(--shadow-secondary)',
+          accent: 'var(--shadow-accent)',
+          neutral: 'var(--shadow-neutral)',
+          danger: 'var(--shadow-danger)',
+          success: 'var(--shadow-success)',
+        },
+      },
       textColor: {
         skin: {
           primary: 'var(--color-text-primary)',

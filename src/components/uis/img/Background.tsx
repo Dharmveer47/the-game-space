@@ -26,7 +26,7 @@ export const Background = ({ className, imgScr, alt, ...props }: Props) => {
     <Image
       alt={alt}
       src={imgScr}
-      sizes='100vw'
+      // sizes='100vw'
       quality={100}
       fill
       //  style={{

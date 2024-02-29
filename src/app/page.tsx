@@ -1,15 +1,16 @@
 import React from 'react';
-import { API_URL } from '@/data/api/getList';
 import Landing, { GameList } from '@/components/home';
+import { getGameList } from '@/data/api/getList';
 
 const Home = async () => {
-  console.log(API_URL);
-
+  const data = await getGameList();
+  if (!data) return null;
+  const singleData = data.results[Math.floor(Math.random() * data.results.length)].id;
   return (
-    <>
-      <Landing />
-      <GameList />
-    </>
+    <div className='w-full flexIc flex-col text-skin-primary'>
+      <Landing dataId={singleData} />
+      <GameList data={data} />
+    </div>
   );
 };
 
